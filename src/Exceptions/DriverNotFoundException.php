@@ -1,6 +1,6 @@
 <?php
 
-namespace Shetabit\Multipay\Exceptions;
+namespace TomatoPHP\TomatoWallet\Exceptions;
 
 class DriverNotFoundException extends \Exception
 {

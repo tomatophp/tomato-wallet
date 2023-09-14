@@ -3,6 +3,8 @@
 namespace TomatoPHP\TomatoWallet;
 
 use Illuminate\Support\ServiceProvider;
+use TomatoPHP\TomatoAdmin\Facade\TomatoMenu;
+use TomatoPHP\TomatoAdmin\Services\Contracts\Menu;
 
 
 class TomatoWalletServiceProvider extends ServiceProvider
@@ -49,9 +51,6 @@ class TomatoWalletServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
 
 
-        // Merge default config with user's config
-        $this->mergeConfigFrom(Payment::getDefaultConfigPath(), 'payment');
-
         Request::overwrite('input', function ($key) {
             return \request($key);
         });
@@ -87,7 +86,28 @@ class TomatoWalletServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        //you boot methods here
+        TomatoMenu::register([
+           Menu::make()
+                ->group(__('Wallets'))
+                ->label(__('Wallets'))
+                ->icon('bx bx-wallet')
+                ->route('admin.wallets.index'),
+            Menu::make()
+                ->group(__('Wallets'))
+                ->label(__('Transactions'))
+                ->icon('bx bx-money')
+                ->route('admin.transactions.index'),
+            Menu::make()
+                ->group(__('Wallets'))
+                ->label(__('Transfers'))
+                ->icon('bx bx-transfer')
+                ->route('admin.transfers.index'),
+            Menu::make()
+                ->group(__('Wallets'))
+                ->label(__('Payments'))
+                ->icon('bx bx-credit-card')
+                ->route('admin.payments.index')
+        ]);
     }
 
 
@@ -114,7 +134,7 @@ class TomatoWalletServiceProvider extends ServiceProvider
      */
     private function existCustomRedirectFormView()
     {
-        return file_exists(resource_path('views/vendor/shetabitPayment') . '/redirectForm.blade.php');
+        return file_exists(resource_path('views/vendor/tomato-wallet') . '/redirectForm.blade.php');
     }
 
     /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace Shetabit\Multipay;
+namespace TomatoPHP\TomatoWallet;
 
 class Request
 {

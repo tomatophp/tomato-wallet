@@ -1,13 +1,13 @@
 <?php
 
-namespace Shetabit\Multipay;
+namespace TomatoPHP\TomatoWallet;
 
-use Shetabit\Multipay\Contracts\DriverInterface;
-use Shetabit\Multipay\Contracts\ReceiptInterface;
-use Shetabit\Multipay\Exceptions\DriverNotFoundException;
-use Shetabit\Multipay\Exceptions\InvoiceNotFoundException;
-use Shetabit\Multipay\Traits\HasPaymentEvents;
-use Shetabit\Multipay\Traits\InteractsWithRedirectionForm;
+use TomatoPHP\TomatoWallet\Contracts\DriverInterface;
+use TomatoPHP\TomatoWallet\Contracts\ReceiptInterface;
+use TomatoPHP\TomatoWallet\Exceptions\DriverNotFoundException;
+use TomatoPHP\TomatoWallet\Exceptions\InvoiceNotFoundException;
+use TomatoPHP\TomatoWallet\Traits\HasPaymentEvents;
+use TomatoPHP\TomatoWallet\Traits\InteractsWithRedirectionForm;
 
 class Payment
 {
@@ -75,7 +75,7 @@ class Payment
      */
     public static function getDefaultConfigPath() : string
     {
-        return dirname(__DIR__).'/config/payment.php';
+        return dirname(__DIR__).'/config/tomato-wallet.php';
     }
 
     /**

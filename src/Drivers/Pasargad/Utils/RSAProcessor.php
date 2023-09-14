@@ -1,8 +1,8 @@
 <?php
 
-namespace Shetabit\Multipay\Drivers\Pasargad\Utils;
+namespace TomatoPHP\TomatoWallet\Drivers\Pasargad\Utils;
 
-use Shetabit\Multipay\Drivers\Pasargad\Utils\RSA;
+use TomatoPHP\TomatoWallet\Drivers\Pasargad\Utils\RSA;
 
 class RSAProcessor
 {

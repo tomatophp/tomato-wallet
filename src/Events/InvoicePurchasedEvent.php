@@ -9,8 +9,8 @@ use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
-use Shetabit\Multipay\Contracts\DriverInterface;
-use Shetabit\Multipay\Invoice;
+use TomatoPHP\TomatoWallet\Contracts\DriverInterface;
+use TomatoPHP\TomatoWallet\Invoice;
 
 class InvoicePurchasedEvent
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Shetabit\Multipay\Traits;
+namespace TomatoPHP\TomatoWallet\Traits;
 
 trait HasDetail
 {

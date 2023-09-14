@@ -1,11 +1,11 @@
 <?php
 
-namespace Shetabit\Multipay\Abstracts;
+namespace TomatoPHP\TomatoWallet\Abstracts;
 
-use Shetabit\Multipay\Contracts\DriverInterface;
-use Shetabit\Multipay\Contracts\ReceiptInterface;
-use Shetabit\Multipay\Invoice;
-use Shetabit\Multipay\RedirectionForm;
+use TomatoPHP\TomatoWallet\Contracts\DriverInterface;
+use TomatoPHP\TomatoWallet\Contracts\ReceiptInterface;
+use TomatoPHP\TomatoWallet\Invoice;
+use TomatoPHP\TomatoWallet\RedirectionForm;
 
 abstract class Driver implements DriverInterface
 {

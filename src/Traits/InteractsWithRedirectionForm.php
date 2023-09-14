@@ -1,8 +1,8 @@
 <?php
 
-namespace Shetabit\Multipay\Traits;
+namespace TomatoPHP\TomatoWallet\Traits;
 
-use Shetabit\Multipay\RedirectionForm;
+use TomatoPHP\TomatoWallet\RedirectionForm;
 
 trait InteractsWithRedirectionForm
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Shetabit\Multipay\Contracts;
+namespace TomatoPHP\TomatoWallet\Contracts;
 
-use Shetabit\Multipay\RedirectionForm;
+use TomatoPHP\TomatoWallet\RedirectionForm;
 
 interface DriverInterface
 {

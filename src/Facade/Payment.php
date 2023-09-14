@@ -1,11 +1,11 @@
 <?php
 
-namespace Shetabit\Payment\Facade;
+namespace TomatoPHP\TomatoWallet\Facade;
 
 use Illuminate\Support\Facades\Facade;
-use Shetabit\Multipay\Invoice;
-use Shetabit\Multipay\Contracts\ReceiptInterface;
-use Shetabit\Multipay\Payment as MultipayPayment;
+use TomatoPHP\TomatoWallet\Invoice;
+use TomatoPHP\TomatoWallet\Contracts\ReceiptInterface;
+use TomatoPHP\TomatoWallet\Payment as MultipayPayment;
 
 /**
  * Class Payment
@@ -22,7 +22,7 @@ use Shetabit\Multipay\Payment as MultipayPayment;
  * @method static ReceiptInterface verify($finalizeCallback = null)
  *
  * @package Shetabit\Payment\Facade
- * @see \Shetabit\Multipay\Payment
+ * @see \TomatoPHP\TomatoWallet\Payment
  */
 class Payment extends Facade
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Shetabit\Multipay;
+namespace TomatoPHP\TomatoWallet;
 
 use Ramsey\Uuid\Uuid;
-use Shetabit\Multipay\Traits\HasDetail;
+use TomatoPHP\TomatoWallet\Traits\HasDetail;
 
 class Invoice
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Shetabit\Multipay\Contracts;
+namespace TomatoPHP\TomatoWallet\Contracts;
 
 use Carbon\Carbon;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Shetabit\Multipay;
+namespace TomatoPHP\TomatoWallet;
 
-use Shetabit\Multipay\Abstracts\Receipt as ReceiptAbstract;
-use Shetabit\Multipay\Traits\HasDetail;
+use TomatoPHP\TomatoWallet\Abstracts\Receipt as ReceiptAbstract;
+use TomatoPHP\TomatoWallet\Traits\HasDetail;
 
 class Receipt extends ReceiptAbstract
 {

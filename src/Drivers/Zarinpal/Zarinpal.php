@@ -1,18 +1,18 @@
 <?php
 
-namespace Shetabit\Multipay\Drivers\Zarinpal;
+namespace TomatoPHP\TomatoWallet\Drivers\Zarinpal;
 
-use Shetabit\Multipay\Abstracts\Driver;
-use Shetabit\Multipay\Contracts\DriverInterface;
-use Shetabit\Multipay\Exceptions\InvalidPaymentException;
-use Shetabit\Multipay\Exceptions\PurchaseFailedException;
-use Shetabit\Multipay\Contracts\ReceiptInterface;
-use Shetabit\Multipay\Drivers\Zarinpal\Strategies\Normal;
-use Shetabit\Multipay\Drivers\Zarinpal\Strategies\Sandbox;
-use Shetabit\Multipay\Drivers\Zarinpal\Strategies\Zaringate;
-use Shetabit\Multipay\Exceptions\DriverNotFoundException;
-use Shetabit\Multipay\Invoice;
-use Shetabit\Multipay\RedirectionForm;
+use TomatoPHP\TomatoWallet\Abstracts\Driver;
+use TomatoPHP\TomatoWallet\Contracts\DriverInterface;
+use TomatoPHP\TomatoWallet\Exceptions\InvalidPaymentException;
+use TomatoPHP\TomatoWallet\Exceptions\PurchaseFailedException;
+use TomatoPHP\TomatoWallet\Contracts\ReceiptInterface;
+use TomatoPHP\TomatoWallet\Drivers\Zarinpal\Strategies\Normal;
+use TomatoPHP\TomatoWallet\Drivers\Zarinpal\Strategies\Sandbox;
+use TomatoPHP\TomatoWallet\Drivers\Zarinpal\Strategies\Zaringate;
+use TomatoPHP\TomatoWallet\Exceptions\DriverNotFoundException;
+use TomatoPHP\TomatoWallet\Invoice;
+use TomatoPHP\TomatoWallet\RedirectionForm;
 
 class Zarinpal extends Driver
 {

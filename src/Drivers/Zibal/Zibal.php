@@ -1,16 +1,16 @@
 <?php
 
-namespace Shetabit\Multipay\Drivers\Zibal;
+namespace TomatoPHP\TomatoWallet\Drivers\Zibal;
 
 use GuzzleHttp\Client;
-use Shetabit\Multipay\Abstracts\Driver;
-use Shetabit\Multipay\Exceptions\InvalidPaymentException;
-use Shetabit\Multipay\Exceptions\PurchaseFailedException;
-use Shetabit\Multipay\Contracts\ReceiptInterface;
-use Shetabit\Multipay\Invoice;
-use Shetabit\Multipay\Receipt;
-use Shetabit\Multipay\RedirectionForm;
-use Shetabit\Multipay\Request;
+use TomatoPHP\TomatoWallet\Abstracts\Driver;
+use TomatoPHP\TomatoWallet\Exceptions\InvalidPaymentException;
+use TomatoPHP\TomatoWallet\Exceptions\PurchaseFailedException;
+use TomatoPHP\TomatoWallet\Contracts\ReceiptInterface;
+use TomatoPHP\TomatoWallet\Invoice;
+use TomatoPHP\TomatoWallet\Receipt;
+use TomatoPHP\TomatoWallet\RedirectionForm;
+use TomatoPHP\TomatoWallet\Request;
 
 class Zibal extends Driver
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Shetabit\Multipay\Abstracts;
+namespace TomatoPHP\TomatoWallet\Abstracts;
 
 use Carbon\Carbon;
-use Shetabit\Multipay\Contracts\ReceiptInterface;
+use TomatoPHP\TomatoWallet\Contracts\ReceiptInterface;
 
 abstract class Receipt implements ReceiptInterface
 {
