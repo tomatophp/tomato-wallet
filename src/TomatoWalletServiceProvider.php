@@ -81,7 +81,9 @@ class TomatoWalletServiceProvider extends ServiceProvider
             );
         });
 
-
+        $this->app->bind('tomato-wallet', function () {
+            return new Payment();
+        });
     }
 
     public function boot(): void
@@ -145,7 +147,7 @@ class TomatoWalletServiceProvider extends ServiceProvider
      */
     private function loadNormalRedirectForm($action, $inputs, $method)
     {
-        return view('shetabitPayment::redirectForm')->with(
+        return view('tomato-wallet::redirectForm')->with(
             [
                 'action' => $action,
                 'inputs' => $inputs,

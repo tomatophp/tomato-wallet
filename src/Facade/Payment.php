@@ -33,6 +33,6 @@ class Payment extends Facade
      */
     public static function getFacadeAccessor()
     {
-        return 'shetabit-payment';
+        return 'tomato-payment';
     }
 }
