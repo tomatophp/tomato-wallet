@@ -22,7 +22,10 @@
         "laravel": {
             "providers": [
                 "TomatoPHP\\TomatoWallet\\TomatoWalletServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "Payment": "TomatoPHP\\TomatoWallet\\Facades\\Payment"
+            }
         }
     },
     "authors": [
