@@ -66,21 +66,17 @@ class TransactionTable extends AbstractTable
             ->column(
                 key: 'id',
                 label: __('Id'),
+                sortable: true,
+                hidden: true
+            )
+            ->column(
+                key: 'wallet.name',
+                label: __('Wallet'),
                 sortable: true
             )
             ->column(
-                key: 'wallet_id',
-                label: __('Wallet id'),
-                sortable: true
-            )
-            ->column(
-                key: 'payable_type',
-                label: __('Payable type'),
-                sortable: true
-            )
-            ->column(
-                key: 'payable_id',
-                label: __('Payable id'),
+                key: 'payable.name',
+                label: __('Payable'),
                 sortable: true
             )
             ->column(
@@ -96,16 +92,6 @@ class TransactionTable extends AbstractTable
             ->column(
                 key: 'confirmed',
                 label: __('Confirmed'),
-                sortable: true
-            )
-            ->column(
-                key: 'meta',
-                label: __('Meta'),
-                sortable: true
-            )
-            ->column(
-                key: 'uuid',
-                label: __('Uuid'),
                 sortable: true
             )
             ->column(key: 'actions',label: trans('tomato-admin::global.crud.actions'))

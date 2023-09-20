@@ -49,6 +49,7 @@ class TomatoWalletServiceProvider extends ServiceProvider
 
         //Register Routes
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+        $this->loadRoutesFrom(__DIR__.'/../routes/api.php');
 
 
         Request::overwrite('input', function ($key) {

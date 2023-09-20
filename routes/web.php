@@ -6,6 +6,8 @@ Route::middleware(['web','auth', 'splade', 'verified'])->name('admin.')->group(f
     Route::get('admin/wallets', [\TomatoPHP\TomatoWallet\Http\Controllers\WalletController::class, 'index'])->name('wallets.index');
     Route::get('admin/wallets/api', [\TomatoPHP\TomatoWallet\Http\Controllers\WalletController::class, 'api'])->name('wallets.api');
     Route::get('admin/wallets/{model}', [\TomatoPHP\TomatoWallet\Http\Controllers\WalletController::class, 'show'])->name('wallets.show');
+    Route::get('admin/wallets/{model}/balance', [\TomatoPHP\TomatoWallet\Http\Controllers\WalletController::class, 'balanceView'])->name('wallets.balance');
+    Route::post('admin/wallets/{model}/balance', [\TomatoPHP\TomatoWallet\Http\Controllers\WalletController::class, 'balance'])->name('wallets.balance.update');
 });
 
 Route::middleware(['web','auth', 'splade', 'verified'])->name('admin.')->group(function () {

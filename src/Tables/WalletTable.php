@@ -66,16 +66,12 @@ class WalletTable extends AbstractTable
             ->column(
                 key: 'id',
                 label: __('Id'),
-                sortable: true
+                sortable: true,
+                hidden: true
             )
             ->column(
-                key: 'holder_type',
-                label: __('Holder type'),
-                sortable: true
-            )
-            ->column(
-                key: 'holder_id',
-                label: __('Holder id'),
+                key: 'holder.name',
+                label: __('Holder'),
                 sortable: true
             )
             ->column(
@@ -84,33 +80,8 @@ class WalletTable extends AbstractTable
                 sortable: true
             )
             ->column(
-                key: 'slug',
-                label: __('Slug'),
-                sortable: true
-            )
-            ->column(
-                key: 'uuid',
-                label: __('Uuid'),
-                sortable: true
-            )
-            ->column(
-                key: 'description',
-                label: __('Description'),
-                sortable: true
-            )
-            ->column(
-                key: 'meta',
-                label: __('Meta'),
-                sortable: true
-            )
-            ->column(
                 key: 'balance',
                 label: __('Balance'),
-                sortable: true
-            )
-            ->column(
-                key: 'decimal_places',
-                label: __('Decimal places'),
                 sortable: true
             )
             ->column(key: 'actions',label: trans('tomato-admin::global.crud.actions'))

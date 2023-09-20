@@ -43,52 +43,6 @@ class PaymentController extends Controller
             model: \TomatoPHP\TomatoWallet\Models\Payment::class,
         );
     }
-
-    /**
-     * @return View
-     */
-    public function create(): View
-    {
-        return Tomato::create(
-            view: 'tomato-wallet::payments.create',
-        );
-    }
-
-    /**
-     * @param Request $request
-     * @return RedirectResponse|JsonResponse
-     */
-    public function store(Request $request): RedirectResponse|JsonResponse
-    {
-        $response = Tomato::store(
-            request: $request,
-            model: \TomatoPHP\TomatoWallet\Models\Payment::class,
-            validation: [
-                            'payment_status_id' => 'required|exists:payment_status,id',
-            'uuid' => 'required|max:255|string',
-            'model_id' => 'required',
-            'model_table' => 'required|max:255|string',
-            'order_id' => 'required',
-            'order_table' => 'required|max:255|string',
-            'type' => 'nullable|max:255|string',
-            'payment_method' => 'nullable|max:255|string',
-            'transaction_vendor' => 'nullable|max:255|string',
-            'transaction_code' => 'nullable|max:255|string',
-            'amount' => 'required',
-            'notes' => 'nullable|max:255|string',
-            'currency' => 'nullable|max:255|string'
-            ],
-            message: __('Payment updated successfully'),
-            redirect: 'admin.payments.index',
-        );
-
-        if($response instanceof JsonResponse){
-            return $response;
-        }
-
-        return $response->redirect;
-    }
-
     /**
      * @param \TomatoPHP\TomatoWallet\Models\Payment $model
      * @return View|JsonResponse
@@ -100,55 +54,6 @@ class PaymentController extends Controller
             view: 'tomato-wallet::payments.show',
         );
     }
-
-    /**
-     * @param \TomatoPHP\TomatoWallet\Models\Payment $model
-     * @return View
-     */
-    public function edit(\TomatoPHP\TomatoWallet\Models\Payment $model): View
-    {
-        return Tomato::get(
-            model: $model,
-            view: 'tomato-wallet::payments.edit',
-        );
-    }
-
-    /**
-     * @param Request $request
-     * @param \TomatoPHP\TomatoWallet\Models\Payment $model
-     * @return RedirectResponse|JsonResponse
-     */
-    public function update(Request $request, \TomatoPHP\TomatoWallet\Models\Payment $model): RedirectResponse|JsonResponse
-    {
-        $response = Tomato::update(
-            request: $request,
-            model: $model,
-            validation: [
-                            'payment_status_id' => 'sometimes|exists:payment_status,id',
-            'uuid' => 'sometimes|max:255|string',
-            'model_id' => 'sometimes',
-            'model_table' => 'sometimes|max:255|string',
-            'order_id' => 'sometimes',
-            'order_table' => 'sometimes|max:255|string',
-            'type' => 'nullable|max:255|string',
-            'payment_method' => 'nullable|max:255|string',
-            'transaction_vendor' => 'nullable|max:255|string',
-            'transaction_code' => 'nullable|max:255|string',
-            'amount' => 'sometimes',
-            'notes' => 'nullable|max:255|string',
-            'currency' => 'nullable|max:255|string'
-            ],
-            message: __('Payment updated successfully'),
-            redirect: 'admin.payments.index',
-        );
-
-         if($response instanceof JsonResponse){
-             return $response;
-         }
-
-         return $response->redirect;
-    }
-
     /**
      * @param \TomatoPHP\TomatoWallet\Models\Payment $model
      * @return RedirectResponse|JsonResponse

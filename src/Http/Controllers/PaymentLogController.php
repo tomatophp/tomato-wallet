@@ -44,40 +44,6 @@ class PaymentLogController extends Controller
         );
     }
 
-    /**
-     * @return View
-     */
-    public function create(): View
-    {
-        return Tomato::create(
-            view: 'tomato-wallet::payment-logs.create',
-        );
-    }
-
-    /**
-     * @param Request $request
-     * @return RedirectResponse|JsonResponse
-     */
-    public function store(Request $request): RedirectResponse|JsonResponse
-    {
-        $response = Tomato::store(
-            request: $request,
-            model: \TomatoPHP\TomatoWallet\Models\PaymentLog::class,
-            validation: [
-                            'status' => 'required',
-            'payload' => 'required',
-            'response' => 'required'
-            ],
-            message: __('PaymentLog updated successfully'),
-            redirect: 'admin.payment-logs.index',
-        );
-
-        if($response instanceof JsonResponse){
-            return $response;
-        }
-
-        return $response->redirect;
-    }
 
     /**
      * @param \TomatoPHP\TomatoWallet\Models\PaymentLog $model
@@ -90,45 +56,6 @@ class PaymentLogController extends Controller
             view: 'tomato-wallet::payment-logs.show',
         );
     }
-
-    /**
-     * @param \TomatoPHP\TomatoWallet\Models\PaymentLog $model
-     * @return View
-     */
-    public function edit(\TomatoPHP\TomatoWallet\Models\PaymentLog $model): View
-    {
-        return Tomato::get(
-            model: $model,
-            view: 'tomato-wallet::payment-logs.edit',
-        );
-    }
-
-    /**
-     * @param Request $request
-     * @param \TomatoPHP\TomatoWallet\Models\PaymentLog $model
-     * @return RedirectResponse|JsonResponse
-     */
-    public function update(Request $request, \TomatoPHP\TomatoWallet\Models\PaymentLog $model): RedirectResponse|JsonResponse
-    {
-        $response = Tomato::update(
-            request: $request,
-            model: $model,
-            validation: [
-                            'status' => 'sometimes',
-            'payload' => 'sometimes',
-            'response' => 'sometimes'
-            ],
-            message: __('PaymentLog updated successfully'),
-            redirect: 'admin.payment-logs.index',
-        );
-
-         if($response instanceof JsonResponse){
-             return $response;
-         }
-
-         return $response->redirect;
-    }
-
     /**
      * @param \TomatoPHP\TomatoWallet\Models\PaymentLog $model
      * @return RedirectResponse|JsonResponse

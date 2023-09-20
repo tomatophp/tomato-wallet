@@ -443,5 +443,5 @@ return [
         'payfa' => \TomatoPHP\TomatoWallet\Drivers\Payfa\Payfa::class,
     ],
 
-
+    'transaction_resource' => null
 ];

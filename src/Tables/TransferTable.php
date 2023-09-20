@@ -79,23 +79,13 @@ class TransferTable extends AbstractTable
                 sortable: true
             )
             ->column(
-                key: 'from_type',
-                label: __('From type'),
+                key: 'from.name',
+                label: __('From'),
                 sortable: true
             )
             ->column(
-                key: 'from_id',
-                label: __('From id'),
-                sortable: true
-            )
-            ->column(
-                key: 'to_type',
-                label: __('To type'),
-                sortable: true
-            )
-            ->column(
-                key: 'to_id',
-                label: __('To id'),
+                key: 'to.name',
+                label: __('To'),
                 sortable: true
             )
             ->column(
@@ -116,11 +106,6 @@ class TransferTable extends AbstractTable
             ->column(
                 key: 'fee',
                 label: __('Fee'),
-                sortable: true
-            )
-            ->column(
-                key: 'uuid',
-                label: __('Uuid'),
                 sortable: true
             )
             ->column(key: 'actions',label: trans('tomato-admin::global.crud.actions'))
