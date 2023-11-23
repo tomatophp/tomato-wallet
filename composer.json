@@ -1,11 +1,18 @@
 {
     "name": "tomatophp/tomato-wallet",
     "type": "library",
-    "description": "Wallet Management for tomato framework",
+    "description": "Account Wallet Manager & Payment Integrations For TomatoPHP and TomatoCRM",
     "keywords": [
         "php",
         "laravel",
-        "template"
+        "payment",
+        "wallet",
+        "tomatophp",
+        "payment gate",
+        "payment gateway",
+        "payment integration",
+        "wallet manager",
+        "tomato-crm"
     ],
     "license": "MIT",
     "autoload": {
