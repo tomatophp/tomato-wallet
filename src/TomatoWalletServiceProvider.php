@@ -93,7 +93,7 @@ class TomatoWalletServiceProvider extends ServiceProvider
            Menu::make()
                 ->group(__('Wallets'))
                 ->label(__('Wallets'))
-                ->icon('bx bx-wallet')
+                ->icon('bx bxs-wallet')
                 ->route('admin.wallets.index'),
             Menu::make()
                 ->group(__('Wallets'))
@@ -108,7 +108,7 @@ class TomatoWalletServiceProvider extends ServiceProvider
             Menu::make()
                 ->group(__('Wallets'))
                 ->label(__('Payments'))
-                ->icon('bx bx-credit-card')
+                ->icon('bx bxs-credit-card')
                 ->route('admin.payments.index')
         ]);
     }
