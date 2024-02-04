@@ -59,7 +59,7 @@ class TomatoWalletServiceProvider extends ServiceProvider
         /**
          * Bind to service container.
          */
-        $this->app->bind('shetabit-payment', function () {
+        $this->app->bind('tomato-payment', function () {
             $config = config('payment') ?? [];
 
             return new Payment($config);
@@ -80,10 +80,6 @@ class TomatoWalletServiceProvider extends ServiceProvider
                     'method' => $method,
                 ]
             );
-        });
-
-        $this->app->bind('tomato-wallet', function () {
-            return new Payment();
         });
     }
 
