@@ -2,7 +2,9 @@
     <x-slot:header>
         {{ __('Transaction') }}
     </x-slot:header>
-
+    <x-slot:icon>
+        bx bx-money
+    </x-slot:icon>
     <div class="pb-12">
         <div class="mx-auto">
             <x-splade-table :for="$table" striped>

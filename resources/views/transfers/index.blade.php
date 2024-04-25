@@ -2,11 +2,9 @@
     <x-slot:header>
         {{ __('Transfer') }}
     </x-slot:header>
-{{--    <x-slot:buttons>--}}
-{{--        <x-tomato-admin-button :modal="true" :href="route('admin.transfers.create')" type="link">--}}
-{{--            {{trans('tomato-admin::global.crud.create-new')}} {{__('Transfer')}}--}}
-{{--        </x-tomato-admin-button>--}}
-{{--    </x-slot:buttons>--}}
+    <x-slot:icon>
+        bx bx-transfer
+    </x-slot:icon>
 
     <div class="pb-12">
         <div class="mx-auto">
